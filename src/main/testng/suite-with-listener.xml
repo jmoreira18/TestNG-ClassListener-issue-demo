@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestNG Bug - Listener Explicit on xml" verbose="1" parallel="classes" thread-count="1">
+    <listeners>
+        <listener class-name="listener.TestListener"/>
+    </listeners>
+    <test name="Execution 1">
+        <classes>
+            <class name="test.TestFile">
+                <methods>
+                    <include name="testSkip"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Execution 2">
+        <classes>
+            <class name="test.TestFile">
+                <methods>
+                    <include name="testSkip"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
